@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e7f7fb"><title>Your Bag — Ashleyloyleyy Coffee House</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+  <div id="app"></div>
+  <template id="page-content">
+<section class="page-intro">
+      <span class="eyebrow">Almost the good part</span>
+      <h1 class="page-title">Your bag, your way</h1>
+      <p>Choose how you’d like to enjoy your order. We’ll take it from here.</p>
+      </section>
+      <section class="empty-state" id="checkout-empty" hidden>
+      <h2>Your bag is taking a little breather.</h2>
+      <p>Fill it with something lovely from the cafe or the roastery.</p>
+      <a class="button" href="shop.html">Explore the menu</a>
+      </section>
+      <section class="content-panel" id="cart-panel" hidden>
+      <h2>The good stuff in your bag</h2>
+      <div class="cart-list" id="cart-list">
+      </div>
+      <div class="cart-summary">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">
+      </span>
+      </div>
+      <p class="inline-note">Taxes, if applicable, are calculated at payment.</p>
+      </section>
+      <section class="content-panel" id="checkout-panel" hidden>
+      <h2>How would you like it?</h2>
+      <form id="checkout-form">
+      <div class="choice-grid">
+      <label class="choice-card">
+      <input type="radio" name="fulfillment" value="Store pickup" checked>
+      <strong>Store pickup</strong>
+      <span>Freshly made at our cafe.</span>
+      </label>
+      <label class="choice-card">
+      <input type="radio" name="fulfillment" value="Dine-in">
+      <strong>Dine-in</strong>
+      <span>Enjoy your order at the cafe.</span>
+      </label>
+      <label class="choice-card">
+      <input type="radio" name="fulfillment" value="Local delivery">
+      <strong>Local delivery</strong>
+      <span>Delivered nearby. A $4 fee applies.</span>
+      </label>
+      </div>
+      <div class="form-field" id="table-link-field" hidden>
+      <label for="order-table">Reserved table (optional)</label>
+      <select id="order-table" name="table">
+      <option value="">No table reservation</option>
+      </select>
+      </div>
+      <div class="form-field" id="address-field" hidden>
+      <label for="delivery-address">Delivery address</label>
+      <input id="delivery-address" name="address" placeholder="Street address and apartment">
+      </div>
+      <button class="button" id="checkout-submit" type="submit">Continue to payment</button>
+      <p class="form-result" aria-live="polite">
+      </p>
+      </form>
+      </section>
+  </template>
+</body>
+</html>

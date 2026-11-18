@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e7f7fb"><title>Coffee & Menu — Ashleyloyleyy Coffee House</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+  <div id="app"></div>
+  <template id="page-content">
+<section class="page-intro">
+      <span class="eyebrow">Made with good things</span>
+      <h1 class="page-title">The coffee &amp; menu</h1>
+      <p>Meet your next everyday favorite, from slow-pulled espresso to beans roasted right here.</p>
+      </section>
+      <div class="filter-bar" role="group" aria-label="Filter menu">
+      <button class="filter-button active" data-filter="All">All the good things</button>
+      <button class="filter-button" data-filter="Hot espresso">Hot espresso</button>
+      <button class="filter-button" data-filter="Iced &amp; cold">Iced &amp; cold</button>
+      <button class="filter-button" data-filter="Bakery">Bakery</button>
+      <button class="filter-button" data-filter="Whole beans">Whole beans</button>
+      </div>
+      <section class="product-grid" id="featured">
+      <article class="product-card" data-category="Hot espresso" data-name="Honey oat flat white" data-price="5.5">
+      <div class="product-art">
+      <img src="Coffe1.jpeg" alt="Honey oat flat white">
+      <span>A little honey</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Honey oat flat white</h3>
+      <span class="product-price">$5.50</span>
+      </div>
+      <p>Double espresso, steamed oat milk, a little wildflower honey.</p>
+      <button class="button button-small add-to-bag" data-product="flat-white">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Hot espresso" data-name="House cappuccino" data-price="4.75">
+      <div class="product-art">
+      <img src="Coffe2.jpg" alt="House cappuccino">
+      <span>The everyday cup</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>House cappuccino</h3>
+      <span class="product-price">$4.75</span>
+      </div>
+      <p>House espresso, velvety milk, and cocoa dust.</p>
+      <button class="button button-small add-to-bag" data-product="cappuccino">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Iced &amp; cold" data-name="Slow-steep cold brew" data-price="5.25">
+      <div class="product-art">
+      <img src="Coffe3.jpeg" alt="Slow-steep cold brew">
+      <span>Steeped slowly</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Slow-steep cold brew</h3>
+      <span class="product-price">$5.25</span>
+      </div>
+      <p>18-hour steep, milk chocolate, toasted pecan, no rush.</p>
+      <button class="button button-small add-to-bag" data-product="cold-brew">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Bakery" data-name="Brown butter morning bun" data-price="4.5">
+      <div class="product-art">
+      <img src="Coffe4.jpeg" alt="Brown butter morning bun">
+      <span>From our oven</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Brown butter morning bun</h3>
+      <span class="product-price">$4.50</span>
+      </div>
+      <p>Laminated by hand, rolled in cinnamon sugar, baked each morning.</p>
+      <button class="button button-small add-to-bag" data-product="morning-bun">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Iced &amp; cold" data-name="Vanilla iced latte" data-price="5.75">
+      <div class="product-art">
+      <img src="Coffe5.webp" alt="Vanilla iced latte">
+      <span>Creamy and cool</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Vanilla iced latte</h3>
+      <span class="product-price">$5.75</span>
+      </div>
+      <p>House espresso, vanilla syrup, and chilled milk over ice.</p>
+      <button class="button button-small add-to-bag" data-product="vanilla-iced-latte">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Bakery" data-name="Chocolate sea salt cookie" data-price="3.75">
+      <div class="product-art">
+      <img src="Coffe6.jpeg" alt="Chocolate sea salt cookie">
+      <span>Freshly baked</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Chocolate sea salt cookie</h3>
+      <span class="product-price">$3.75</span>
+      </div>
+      <p>A chewy chocolate cookie finished with flaky sea salt.</p>
+      <button class="button button-small add-to-bag" data-product="sea-salt-cookie">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Hot espresso" data-name="Mocha" data-price="5.75">
+      <div class="product-art">
+      <img src="Coffe7.jpeg" alt="Mocha">
+      <span>Rich and chocolatey</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Mocha</h3>
+      <span class="product-price">$5.75</span>
+      </div>
+      <p>House espresso, dark chocolate, and steamed milk.</p>
+      <button class="button button-small add-to-bag" data-product="mocha">Add to bag</button>
+      </div>
+      </article>
+      <article class="product-card" data-category="Iced &amp; cold" data-name="Caramel iced latte" data-price="5.95">
+      <div class="product-art">
+        <img src="Coffe8.jpg" alt="Caramel iced latte">
+      <span>Sweet and refreshing</span>
+      </div>
+      <div class="product-body">
+      <div class="product-top">
+      <h3>Caramel iced latte</h3>
+      <span class="product-price">$5.95</span>
+      </div>
+      <p>Espresso, caramel syrup, and chilled milk poured over ice.</p>
+      <button class="button button-small add-to-bag" data-product="caramel-iced-latte">Add to bag</button>
+      </div>
+      </article>
+    
+      </section>
+      <p class="catalog-note">Our menu changes with the seasons. Have an allergy or a question? <a class="text-link" href="contact.html">Just ask us →</a>
+      </p>
+  </template>
+</body>
+</html>

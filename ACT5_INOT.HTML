@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Inot - Picture Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Alice', serif;
+            font-size: 18px;
+            background: 
+                url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(15, 23, 42, 0.80) 0%,
+                rgba(30, 41, 59, 0.65) 45%,
+                rgba(15, 118, 110, 0.45) 100%
+            );
+            z-index: 0;
+            pointer-events: none;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 30% 0%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 0%, rgba(153, 246, 228, 0.10) 0%, transparent 45%),
+                linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            background-size: 100% 100%, 100% 100%, 200% 100%;
+            animation: lightBeams 8s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @keyframes lightBeams {
+            0% { background-position: 0 0, 100% 0, 0 0; opacity: 0.6; }
+            50% { background-position: 0 0, 100% 0, 100% 0; opacity: 1; }
+            100% { background-position: 0 0, 100% 0, 0 0; opacity: 0.6; }
+        }
+        .gallery-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid #0f766e;
+            border-radius: 8px;
+            box-shadow: 
+                0 0 40px rgba(15, 118, 110, 0.45),
+                0 0 80px rgba(13, 148, 136, 0.25),
+                0 15px 35px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        .top-bar {
+            background: linear-gradient(90deg, #115e59, #0f766e, #14b8a6);
+            padding: 8px 18px;
+            border-bottom: 2px solid #0d9488;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Alice', serif;
+            font-size: 17px;
+        }
+        .window-buttons span {
+            margin-left: 8px;
+            font-size: 14px;
+        }
+        .gallery-content {
+            padding: 35px 30px;
+            text-align: center;
+        }
+        .gallery-title {
+            font-family: 'Alice', serif;
+            font-size: 28px;
+            color: #0f766e;
+            margin: 0 0 8px;
+            letter-spacing: 1px;
+        }
+        .gallery-subtitle {
+            font-size: 14px;
+            color: #475569;
+            margin: 0 0 25px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            justify-items: center;
+        }
+        .image-grid a {
+            border: 3px solid #0f766e;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-grid a:hover {
+            transform: scale(1.08);
+            box-shadow: 
+                0 0 20px rgba(20, 184, 166, 0.6),
+                0 0 35px rgba(13, 148, 136, 0.35),
+                0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .image-grid img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 500px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="top-bar">
+            <span>Kenneth Inot — Gallery</span>
+            <div class="window-buttons">
+                <span>□</span>
+                <span>×</span>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h2 class="gallery-title">MY PICTURE GALLERY</h2>
+            <p class="gallery-subtitle">BS in Information Technology — Mandaue City College</p>
+            <div class="image-grid">
+                <a href="https://github.com" target="_blank">
+                    <img src="https://picsum.photos/id/180/200/200" alt="Workspace">
+                </a>
+                <a href="https://stackoverflow.com" target="_blank">
+                    <img src="https://picsum.photos/id/1/200/200" alt="Coding">
+                </a>
+                <a href="https://developer.mozilla.org" target="_blank">
+                    <img src="https://picsum.photos/id/160/200/200" alt="Technology">
+                </a>
+                <a href="https://www.w3schools.com" target="_blank">
+                    <img src="https://picsum.photos/id/119/200/200" alt="Laptop">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

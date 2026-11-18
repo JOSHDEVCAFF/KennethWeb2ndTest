@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e7f7fb"><title>Payment — Ashleyloyleyy Coffee House</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+  <div id="app"></div>
+  <template id="page-content">
+<section class="page-intro">
+      <span class="eyebrow">Secure checkout</span>
+      <h1 class="page-title">Let’s make it official</h1>
+      <p>One last step before your Ashleyloyleyy favorites are on their way.</p>
+      </section>
+      <section class="empty-state" id="payment-empty" hidden>
+      <h2>Nothing to pay for just yet.</h2>
+      <p>Your bag’s ready when you are.</p>
+      <a class="button" href="shop.html">Browse the menu</a>
+      </section>
+      <section class="content-panel" id="payment-summary" hidden>
+      <h2>Order summary</h2>
+      <p id="payment-order-summary">
+      </p>
+      <p class="inline-note">This is a demo checkout. No card details are stored or sent, and no real payment will be taken.</p>
+      </section>
+      <form class="content-panel" id="payment-form" hidden>
+      <h2>Mock payment</h2>
+      <div class="form-field">
+      <label for="payer-name">Name on order</label>
+      <input id="payer-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="form-field">
+      <label for="payer-email">Email for your receipt</label>
+      <input id="payer-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="form-field">
+      <label for="payer-method">Payment method</label>
+      <select id="payer-method" name="method">
+      <option>Demo card · no charge</option>
+      <option>Pay at cafe</option>
+      </select>
+      </div>
+      <button class="button" id="payment-submit" type="submit">Place demo order</button>
+      </form>
+      <section class="empty-state" id="payment-success" hidden>
+      <span class="pill" id="success-order">
+      </span>
+      <h2 id="success-name">
+      </h2>
+      <p>We’ve noted your order. Track it anytime in My Orders.</p>
+      <a class="button" href="orders.html">Track my order</a>
+      </section>
+  </template>
+</body>
+</html>

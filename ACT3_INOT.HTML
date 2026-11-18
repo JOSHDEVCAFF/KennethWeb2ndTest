@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Activity No. 3 (Kenneth Inot)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background:
+                linear-gradient(to bottom,
+                    rgba(15, 32, 39, 0.88) 0%,
+                    rgba(32, 58, 67, 0.88) 50%,
+                    rgba(44, 83, 100, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200') center center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7dd3fc;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+        .gallery-grid img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+            border: 3px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+            border-color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kenneth Inot's Photo Gallery</h1>
+    <p class="subtitle">Activity No. 3 — BS in Information Technology (MCC)</p>
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- ROW 1 -->
+            <img src="https://picsum.photos/id/10/200/200" alt="Photo 1">
+            <img src="https://picsum.photos/id/11/200/200" alt="Photo 2">
+            <img src="https://picsum.photos/id/12/200/200" alt="Photo 3">
+            <img src="https://picsum.photos/id/13/200/200" alt="Photo 4">
+            <img src="https://picsum.photos/id/14/200/200" alt="Photo 5">
+
+            <!-- ROW 2 -->
+            <img src="https://picsum.photos/id/15/200/200" alt="Photo 6">
+            <img src="https://picsum.photos/id/16/200/200" alt="Photo 7">
+            <img src="https://picsum.photos/id/17/200/200" alt="Photo 8">
+            <img src="https://picsum.photos/id/18/200/200" alt="Photo 9">
+            <img src="https://picsum.photos/id/19/200/200" alt="Photo 10">
+
+            <!-- ROW 3 -->
+            <img src="https://picsum.photos/id/20/200/200" alt="Photo 11">
+            <img src="https://picsum.photos/id/21/200/200" alt="Photo 12">
+            <img src="https://picsum.photos/id/22/200/200" alt="Photo 13">
+            <img src="https://picsum.photos/id/23/200/200" alt="Photo 14">
+            <img src="https://picsum.photos/id/24/200/200" alt="Photo 15">
+
+            <!-- ROW 4 -->
+            <img src="https://picsum.photos/id/25/200/200" alt="Photo 16">
+            <img src="https://picsum.photos/id/26/200/200" alt="Photo 17">
+            <img src="https://picsum.photos/id/27/200/200" alt="Photo 18">
+            <img src="https://picsum.photos/id/28/200/200" alt="Photo 19">
+            <img src="https://picsum.photos/id/29/200/200" alt="Photo 20">
+        </div>
+    </div>
+</body>
+</html>

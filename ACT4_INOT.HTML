@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Item Quiz — Information Technology & Computing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200') no-repeat center center fixed;
+            background-size: cover;
+            padding: 50px 25px;
+            font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+            color: #1e293b;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(30, 58, 138, 0.65));
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 45px;
+            border-radius: 28px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 28px;
+        }
+
+        .student-meta {
+            text-align: center;
+            color: #475569;
+            font-size: 15px;
+            margin-bottom: 35px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 15px;
+        }
+
+        .question {
+            margin-bottom: 28px;
+            padding: 25px;
+            background: linear-gradient(to right, rgba(239, 246, 255, 0.85), rgba(219, 234, 254, 0.7));
+            border-radius: 18px;
+            box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .question:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
+        }
+
+        .q-number {
+            font-weight: 700;
+            font-size: 19px;
+            color: #1e40af;
+            margin-bottom: 12px;
+        }
+
+        .choices {
+            margin-left: 28px;
+            line-height: 2.1;
+            font-size: 17px;
+            color: #334155;
+        }
+
+        .correct {
+            color: #15803d;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Information Technology Quiz</h1>
+        <div class="student-meta">Prepared by: Kenneth Inot | BS in Information Technology — MCC</div>
+
+        <div class="question">
+            <div class="q-number">1. What does HTML stand for?</div>
+            <div class="choices">
+                A. HighText Machine Language<br>
+                B. <span class="correct">HyperText Markup Language</span><br>
+                C. Hyperloop Text Management Language<br>
+                D. Home Tool Markup Language
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">2. Which component is considered the "brain" of the computer?</div>
+            <div class="choices">
+                A. RAM<br>
+                B. Hard Drive<br>
+                C. <span class="correct">Central Processing Unit (CPU)</span><br>
+                D. Motherboard
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">3. Which HTML tag is used to create a hyperlink?</div>
+            <div class="choices">
+                A. &lt;link&gt;<br>
+                B. &lt;href&gt;<br>
+                C. <span class="correct">&lt;a&gt;</span><br>
+                D. &lt;url&gt;
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">4. What does CSS stand for?</div>
+            <div class="choices">
+                A. Computer Style Sheets<br>
+                B. Creative Styling System<br>
+                C. Colorful Style Syntax<br>
+                D. <span class="correct">Cascading Style Sheets</span>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">5. Which number system is used natively by digital computers?</div>
+            <div class="choices">
+                A. Decimal<br>
+                B. <span class="correct">Binary</span><br>
+                C. Octal<br>
+                D. Hexadecimal
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">6. How many bits make up one byte?</div>
+            <div class="choices">
+                A. 4<br>
+                B. <span class="correct">8</span><br>
+                C. 16<br>
+                D. 32
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">7. Which protocol is used to securely transfer web pages over the internet?</div>
+            <div class="choices">
+                A. FTP<br>
+                B. SMTP<br>
+                C. <span class="correct">HTTPS</span><br>
+                D. HTTP
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">8. Which type of memory is volatile and loses its data when power is turned off?</div>
+            <div class="choices">
+                A. <span class="correct">RAM</span><br>
+                B. SSD<br>
+                C. ROM<br>
+                D. Flash Drive
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">9. Which CSS property is used to change the text color of an element?</div>
+            <div class="choices">
+                A. font-color<br>
+                B. text-style<br>
+                C. <span class="correct">color</span><br>
+                D. background-color
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="q-number">10. What does SQL stand for in database management?</div>
+            <div class="choices">
+                A. System Query Logic<br>
+                B. Simple Question Language<br>
+                C. <span class="correct">Structured Query Language</span><br>
+                D. Standard Queue Link
+            </div>
+        </div>
+    </div>
+</body>
+</html>

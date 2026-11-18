@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e7f7fb"><title>Reservations — Ashleyloyleyy Coffee House</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body>
+  <div id="app"></div>
+  <template id="page-content">
+<section class="page-intro">
+      <span class="eyebrow">Come on in</span>
+      <h1 class="page-title">Save yourself a seat</h1>
+      <p>Pick your spot, bring your people, and we’ll have a table ready. Walk-ins are always welcome, too.</p>
+      </section>
+      <div class="booking-layout">
+      <section class="floor-plan">
+      <div class="floor-label">☼ Front windows · welcome in ☼</div>
+      <div class="table-zones">
+      <div class="table-zone">
+      <h3>Window nook</h3>
+      <div class="table-grid">
+      <button class="table-option" data-table="T1" data-seats="2" data-reserved="false">
+      <strong>T1</strong>
+      <small>2 seats</small>
+      </button>
+      <button class="table-option" data-table="T2" data-seats="2" data-reserved="false">
+      <strong>T2</strong>
+      <small>2 seats</small>
+      </button>
+      </div>
+      </div>
+      <div class="table-zone">
+      <h3>Main cafe floor</h3>
+      <div class="table-grid">
+      <button class="table-option" data-table="T3" data-seats="4" data-reserved="false">
+      <strong>T3</strong>
+      <small>4 seats</small>
+      </button>
+      <button class="table-option" data-table="T4" data-seats="4" data-reserved="false">
+      <strong>T4</strong>
+      <small>4 seats</small>
+      </button>
+      <button class="table-option reserved" data-table="T5" data-seats="4" data-reserved="true" disabled>
+      <strong>T5</strong>
+      <small>Reserved</small>
+      </button>
+      </div>
+      </div>
+      <div class="table-zone">
+      <h3>Garden &amp; gathering</h3>
+      <div class="table-grid">
+      <button class="table-option" data-table="T6" data-seats="4" data-reserved="false">
+      <strong>T6</strong>
+      <small>4 seats · patio</small>
+      </button>
+      <button class="table-option" data-table="T7" data-seats="6" data-reserved="false">
+      <strong>T7</strong>
+      <small>6+ seats</small>
+      </button>
+      </div>
+      </div>
+      </div>
+      <div class="booking-legend">
+      <span>
+      <i>
+      </i>Available</span>
+      <span>
+      <i class="legend-selected">
+      </i>Selected</span>
+      <span>
+      <i class="legend-reserved">
+      </i>Reserved</span>
+      </div>
+      </section>
+      <form class="booking-form" id="booking-form">
+      <h2>Make it yours</h2>
+      <div class="form-field">
+      <label for="booking-date">Date</label>
+      <input id="booking-date" name="date" type="date" required>
+      </div>
+      <div class="form-field">
+      <label for="booking-time">When are you coming?</label>
+      <select id="booking-time" name="time">
+      <option>Morning · 8–11 am</option>
+      <option>Afternoon · 11 am–3 pm</option>
+      <option>Evening · 3–5 pm</option>
+      </select>
+      </div>
+      <div class="form-field">
+      <label for="guest-count">Your party</label>
+      <select id="guest-count" name="guests">
+      <option value="2">2 guests</option>
+      <option value="3-4">3–4 guests</option>
+      <option value="5+">5+ guests</option>
+      </select>
+      </div>
+      <div class="form-field">
+      <label for="booking-name">Name</label>
+      <input id="booking-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="form-field">
+      <label for="booking-notes">Anything we should know? (optional)</label>
+      <textarea id="booking-notes" name="notes">
+      </textarea>
+      </div>
+      <label class="check-row">
+      <input type="checkbox" name="outlet"> A seat near a power outlet, please</label>
+      <p class="booking-status" aria-live="polite">
+      </p>
+      <button class="button" type="submit">Confirm my table</button>
+      </form>
+      </div>
+  </template>
+</body>
+</html>
